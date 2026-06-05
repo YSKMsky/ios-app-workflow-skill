@@ -1,7 +1,7 @@
 interface:
   display_name: "iOS App Workflow"
-  short_description: "Stage iOS work with bounded routing"
-  default_prompt: "Use $ios-app-workflow to classify app scale, choose the current stage, route to the right iOS/UI/testing skills, and keep docs and context bounded."
+  short_description: "Guide non-coders through staged SwiftUI apps"
+  default_prompt: "Use $ios-app-workflow to guide a non-coding user through SwiftUI app scope, short docs, UI reference, implementation planning, risk-driven testing, skill routing, and handoff."
 
 policy:
   allow_implicit_invocation: true

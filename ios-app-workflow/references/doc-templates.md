@@ -9,6 +9,7 @@ Use these when creating or updating workflow docs. Keep documents short enough t
 - PRD.md
 - UX_SPEC.md
 - UI_REFERENCE.md
+- Feature Spec
 - IMPLEMENTATION_PLAN.md
 - TEST_PLAN.md
 
@@ -19,6 +20,7 @@ Use these when creating or updating workflow docs. Keep documents short enough t
 - Keep `Key Decisions` concrete and dated when useful.
 - Put long explanations under `Details`.
 - Update summaries after major phase changes.
+- Treat feature specs as task records. They may update main workflow docs only by changing `Context Summary` or `Key Decisions`.
 
 ## APP_BRIEF.md
 
@@ -31,11 +33,13 @@ Use these when creating or updating workflow docs. Keep documents short enough t
 - Core problem:
 - V1 loop:
 - App scale:
+- Launch intent:
 
 ## Key Decisions
 - V1 includes:
 - V1 excludes:
 - V2/V3 candidates:
+- Product owner checkpoints:
 
 ## Open Questions
 - 
@@ -43,6 +47,7 @@ Use these when creating or updating workflow docs. Keep documents short enough t
 ## Details
 ### Product Goal
 ### User And Use Case
+### Launch Intent
 ### V1 Scope
 ### Non-Goals
 ### Success Criteria
@@ -121,6 +126,48 @@ Use these when creating or updating workflow docs. Keep documents short enough t
 ### Do Not Want
 ### Key Screens
 ### Reusable Visual Rules
+```
+
+## Feature Spec
+
+Create feature specs under `docs/specs/` as `spec{n}_<slug>.md`.
+
+```markdown
+# Feature Spec: <title>
+
+## Context Summary
+- 
+
+## Confirmed Decisions
+- 
+
+## TBD / Open Questions
+- 
+
+## Goals
+- 
+
+## Non-Goals
+- 
+
+## User Flow
+- 
+
+## Proposed Approach
+
+## Alternatives Considered
+
+## Implementation Boundaries
+
+## UI Notes
+
+## Testing Notes
+
+## Acceptance Criteria
+- [ ] 
+
+## Future Work
+- 
 ```
 
 ## IMPLEMENTATION_PLAN.md

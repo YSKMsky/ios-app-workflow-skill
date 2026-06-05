@@ -1,0 +1,9 @@
+{
+  "default_language": "zh-Hant",
+  "user_coding_level": "non-coding",
+  "default_platform": "iOS SwiftUI",
+  "figma_default": false,
+  "preferred_ui_direction": "quiet, clear, refined, not SaaS-like, not flashy illustration",
+  "default_validation_style": "risk-driven",
+  "default_cloud_scope": "reserve interface only unless V1 requires cloud behavior"
+}

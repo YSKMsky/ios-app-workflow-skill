@@ -1,0 +1,7 @@
+interface:
+  display_name: "iOS App Workflow"
+  short_description: "Stage iOS work with bounded routing"
+  default_prompt: "Use $ios-app-workflow to classify app scale, choose the current stage, route to the right iOS/UI/testing skills, and keep docs and context bounded."
+
+policy:
+  allow_implicit_invocation: true

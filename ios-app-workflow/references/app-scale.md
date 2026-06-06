@@ -6,7 +6,6 @@ Use this before choosing document depth, UI validation depth, testing depth, or 
 
 - Dimensions
 - Scale Rules
-- English Learning App Acceptance Case
 
 ## Dimensions
 
@@ -89,21 +88,3 @@ Testing:
 - screenshots for key screens and UI polish stages
 - mocked or targeted runtime checks for API flows
 - avoid exhaustive UI tests unless a core journey is fragile
-
-## English Learning App Acceptance Case
-
-Classify the V1 English learning app as `medium` when it includes:
-
-- OpenAI API generated article, questions, expressions, and feedback
-- read/write learning loop
-- local saved articles, expressions, answers, AI feedback, notes, highlights, and underlines
-- no V1 login, payment, or cloud persistence
-- cloud interface reserved for later
-- high UI taste requirements
-
-Testing impact:
-
-- skip cloud sync, auth, and payment tests in V1
-- test local save and relaunch behavior
-- test API behavior with mocks or a targeted live smoke only after credential gate
-- use screenshots only for key screens or polish, not every minor copy change

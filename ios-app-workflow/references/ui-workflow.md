@@ -6,6 +6,8 @@ Use this when UI direction, reference images, generated concepts, SwiftUI implem
 
 - UI Input Classifier
 - Low-Cost UI Reference Pack
+- Visual Match Rubric
+- UI Iteration Budget
 - Recommended UI Paths
 - Page structure only
 - Mood board or visual references
@@ -44,6 +46,43 @@ Required sections:
 - Reusable Visual Rules
 
 Use this instead of a full design system for `small` and most `medium` apps.
+
+## Visual Match Rubric
+
+When the user asks for "90% visual match", do not treat the number as exact measurement. Translate it into this acceptance rule:
+
+- no P0 issue remains
+- no obvious P1 issue remains
+- remaining issues are subjective P2 polish
+- visual score is at least 90/100
+
+Score:
+
+| Area | Points |
+| --- | ---: |
+| Structure and content presence | 25 |
+| Layout, spacing, alignment, safe area | 25 |
+| Typography scale, weight, hierarchy | 15 |
+| Color, material, contrast, background | 15 |
+| Density, rhythm, component shape/radius | 10 |
+| Device, viewport, and state correctness | 10 |
+
+Do not compare raw image dimensions before checking device frame, black border, safe area, orientation, status or nav bars, scroll position, and appearance mode.
+
+## UI Iteration Budget
+
+Default:
+
+- 1 baseline app screenshot
+- up to 3 edit-and-verify cycles
+- 1 final screenshot
+
+For high-fidelity matching explicitly requested by the user:
+
+- up to 5 edit-and-verify cycles
+- stop earlier when P0/P1 issues are resolved
+
+After the budget is used, report remaining P1/P2 deltas and recommend whether to continue, branch, or ask for user visual feedback. Do not keep polishing silently.
 
 ## Recommended UI Paths
 

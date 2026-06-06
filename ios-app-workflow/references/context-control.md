@@ -11,6 +11,8 @@ Every durable workflow doc should start with:
 - `Open Questions`
 - `Details`
 
+Before reading durable docs, state the intended reading set.
+
 Default reading order:
 
 1. Read `Context Summary`.
@@ -18,11 +20,22 @@ Default reading order:
 3. Read only the `Details` section needed for the current task.
 4. Do not read every workflow doc unless the task truly crosses all phases.
 
+Default limits:
+
+- Normal feature-level task: read `docs/WORKFLOW_STATE.md` if present, one relevant main doc summary, and one feature spec.
+- UI task: read `docs/WORKFLOW_STATE.md` if present, relevant `UX_SPEC.md` screen summary, `UI_REFERENCE.md`, and latest screenshot or design target.
+- Implementation task: read `IMPLEMENTATION_PLAN.md` current slice, changed files, and only relevant PRD or UX details.
+- Testing task: read `TEST_PLAN.md`, changed files, and failing logs or runtime notes.
+- Handoff task: read summaries and latest decisions only.
+
+If more context is needed, say what is missing and read the smallest section that can answer it.
+
 ## Stage Reading Sets
 
 | Stage | Read |
 | --- | --- |
-| App scale | `APP_BRIEF.md` summary, current user request |
+| Resume | `docs/WORKFLOW_STATE.md`, then only relevant summaries |
+| App scale | `APP_BRIEF.md` summary if present, current user request |
 | PRD update | `APP_BRIEF.md`, `PRD.md` relevant details |
 | UX update | `APP_BRIEF.md`, `PRD.md` summary, `UX_SPEC.md` relevant screen |
 | UI work | `UX_SPEC.md` relevant screen, `UI_REFERENCE.md`, latest screenshot/design target |

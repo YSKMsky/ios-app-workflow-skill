@@ -27,6 +27,44 @@ Do not:
 - build listening/cards because they are product ideas
 - call Supabase only because future cloud support is mentioned
 
+## Project Profile Example: English Learning App
+
+Use this only as an example for a similar project. Do not apply English-learning requirements to unrelated apps.
+
+Classify the V1 English learning app as `medium` when it includes:
+
+- OpenAI API generated article, questions, expressions, and feedback
+- read/write learning loop
+- local saved articles, expressions, answers, AI feedback, notes, highlights, and underlines
+- no V1 login, payment, or cloud persistence
+- cloud interface reserved for later
+- high UI taste requirements
+
+Testing impact:
+
+- skip cloud sync, auth, and payment tests in V1
+- test local save and relaunch behavior
+- test API behavior with mocks or a targeted live smoke only after credential gate
+- use screenshots only for key screens or polish, not every minor copy change
+
+For the V1 read/write learning loop:
+
+Required:
+
+- app opens to Read page after relaunch
+- saved article, expression, answer, feedback, note, highlight, and underline remain accessible
+- generated article/questions/expressions/feedback path has mock or targeted live smoke
+- reader, questions, expression detail, and saved review surfaces have key visual checks
+
+Skipped:
+
+- cloud sync tests
+- login tests
+- payment tests
+- card feature tests
+- listening feature tests
+- exhaustive UI automation for text selection/highlight if agent cannot operate it
+
 ## Page Structure Only, No Figma
 
 User says:

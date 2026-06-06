@@ -34,11 +34,13 @@ Read these files only when their condition applies:
 | Reference | Read when |
 | --- | --- |
 | `references/app-scale.md` | App size, document depth, testing depth, or V1 scope is unclear. |
+| `references/initialization.md` | User says initialize, start, resume, take over, or use this workflow for a new/existing iOS project. |
 | `references/product-owner-mode.md` | Product seriousness, user control, visible checkpoints, or launch/share quality is unclear. |
 | `references/main-workflow.md` | Starting or continuing the staged app workflow. |
 | `references/feature-spec-mode.md` | The task is feature-level rather than app-level. |
 | `references/ui-workflow.md` | UI direction, mood board, reference images, design image matching, screenshot mismatch, or polish is involved. |
 | `references/testing.md` | Choosing verification commands, simulator use, screenshots, UI tests, or explicit skips. |
+| `references/app-store-readiness.md` | Public launch, TestFlight, App Store, privacy, account, payment, UGC, AI disclosure, analytics, tracking, or other release-risk topics are involved. |
 | `references/skill-routing.md` | Deciding which skill/plugin to invoke, or avoiding over-invocation. |
 | `references/context-control.md` | Docs are long, context is large, phase is ending, or thread/branch/handoff may be needed. |
 | `references/doc-templates.md` | Creating or updating workflow docs. |

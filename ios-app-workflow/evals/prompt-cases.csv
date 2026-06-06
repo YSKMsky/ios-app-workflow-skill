@@ -1,0 +1,11 @@
+id,should_trigger,prompt,expected_core_behavior
+init-01,true,"Use $ios-app-workflow to initialize a new SwiftUI iOS app. My idea is a reading notes app.","loads initialization, identifies app-level discovery, creates or proposes WORKFLOW_STATE and APP_BRIEF, asks only blocking product questions"
+init-02,true,"Use $ios-app-workflow. Resume this project from docs/WORKFLOW_STATE.md and continue the current build slice.","reads workflow state first, reads only relevant summaries/details, states stage scope action and verification boundary"
+feature-01,true,"Add a dark mode toggle in Settings. Do not reopen the whole product workflow.","uses feature-level mode, avoids full app workflow, defines focused verification"
+ui-01,true,"This SwiftUI screen should match the design image about 90%.","loads UI workflow, normalizes screenshot/design target, uses visual match rubric, limits iteration cycles"
+test-01,true,"Only copy changed in one SwiftUI label. What tests should run?","uses risk-driven testing, matches claim to cheapest proof, skips simulator/screenshot unless visible risk is high"
+release-01,true,"I want to prepare this app for TestFlight and App Store review.","loads app-store readiness, classifies release risks, creates or proposes APP_STORE_READINESS without rewriting architecture"
+handoff-01,true,"This thread is long. Help me continue the next UI polish step in a fresh thread.","loads context-control, recommends handoff with summaries and next prompt, does not duplicate full docs"
+negative-01,false,"My Xcode project has one isolated compile error. Fix it.","does not use full app workflow, routes to narrower iOS/debugging skill if available"
+negative-02,false,"Profile this SwiftUI screen because scrolling drops frames.","does not use app workflow, routes to performance skill if available"
+negative-03,false,"Only rewrite this README paragraph.","does not start iOS app workflow"

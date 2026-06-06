@@ -5,6 +5,7 @@ Use these when creating or updating workflow docs. Keep documents short enough t
 ## Contents
 
 - Global Rules
+- WORKFLOW_STATE.md
 - APP_BRIEF.md
 - PRD.md
 - UX_SPEC.md
@@ -12,6 +13,7 @@ Use these when creating or updating workflow docs. Keep documents short enough t
 - Feature Spec
 - IMPLEMENTATION_PLAN.md
 - TEST_PLAN.md
+- APP_STORE_READINESS.md
 
 ## Global Rules
 
@@ -21,6 +23,44 @@ Use these when creating or updating workflow docs. Keep documents short enough t
 - Put long explanations under `Details`.
 - Update summaries after major phase changes.
 - Treat feature specs as task records. They may update main workflow docs only by changing `Context Summary` or `Key Decisions`.
+
+## WORKFLOW_STATE.md
+
+```markdown
+# WORKFLOW_STATE
+
+## Context Summary
+- Current stage:
+- App scale:
+- Launch intent:
+- Product goal:
+- Current build slice:
+- Last verified state:
+- Next recommended action:
+
+## Key Decisions
+-
+
+## Open Questions
+-
+
+## Durable Docs
+- APP_BRIEF.md:
+- PRD.md:
+- UX_SPEC.md:
+- UI_REFERENCE.md:
+- IMPLEMENTATION_PLAN.md:
+- TEST_PLAN.md:
+- docs/specs/:
+
+## Do Not Do Yet
+-
+
+## Context Budget Notes
+- Read this file first when resuming.
+- Read durable doc summaries before details.
+- Do not reopen the full app workflow unless app-level scope changed.
+```
 
 ## APP_BRIEF.md
 
@@ -220,4 +260,33 @@ Create feature specs under `docs/specs/` as `spec{n}_<slug>.md`.
 ### API Scenarios
 ### Manual Checklist
 ### Skipped Tests And Why
+```
+
+## APP_STORE_READINESS.md
+
+```markdown
+# APP_STORE_READINESS
+
+## Context Summary
+- Launch target:
+- App Store risk level:
+- Required before TestFlight:
+- Required before App Review:
+
+## Key Decisions
+-
+
+## Open Questions
+-
+
+## Details
+### Distribution Path
+### Privacy / Data Map
+### Third-Party Services / AI
+### Account / Login / Deletion
+### Monetization / IAP / Subscription
+### UGC / Content / Safety
+### Metadata / Screenshots / Review Notes
+### Build / SDK / Device Testing
+### Explicit Non-Goals For This Release
 ```

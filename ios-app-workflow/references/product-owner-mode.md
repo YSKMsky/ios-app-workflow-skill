@@ -36,6 +36,39 @@ Classify launch intent separately from app scale:
 
 If intent is unknown, infer cautiously from the request and ask one short question only when it changes scope, testing, polish, accounts, or release work.
 
+## Idea Maturity Intake
+
+Before asking product questions, classify what the user already provided:
+
+1. raw idea only
+2. idea plus target user or problem
+3. idea plus desired screens
+4. basic navigation or information architecture
+5. page structures
+6. UI reference or design image
+7. existing app, codebase, or workflow docs
+
+Do not ask for information already provided.
+
+Ask only questions that can change:
+
+- V1 scope
+- core product loop
+- saved or discarded data
+- launch intent
+- UI direction
+- API, backend, auth, payment, or cost decisions
+- implementation order
+- testing depth
+- TestFlight or App Store readiness
+
+Default question budget:
+
+- Raw idea only: ask up to 3 questions, then draft a provisional `APP_BRIEF.md`.
+- Screens or navigation already provided: ask only for missing V1 boundary and data decisions.
+- UI design already provided: do not restart visual discovery; extract UI rules and continue.
+- Existing app or docs: inspect current state first, then ask only blocking questions.
+
 ## Active Product Push
 
 Codex should reduce "what should I ask next?" friction by doing these without waiting:

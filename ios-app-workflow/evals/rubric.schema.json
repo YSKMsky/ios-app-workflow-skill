@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ios-app-workflow eval result",
+  "type": "object",
+  "required": [
+    "case_id",
+    "trigger_correct",
+    "process_score",
+    "artifact_score",
+    "efficiency_score",
+    "notes"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "trigger_correct": {
+      "type": "boolean"
+    },
+    "process_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "artifact_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "efficiency_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

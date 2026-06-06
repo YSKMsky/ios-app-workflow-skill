@@ -6,6 +6,7 @@ Use this for staged iOS app work. Keep phases small and do not turn the workflow
 
 - Workflow
 - App-Level vs Feature-Level Gate
+- Stage Skipping Rule
 - Phase Gates
 - Product Owner Mode
 - App Scale
@@ -42,10 +43,19 @@ Use Feature Spec Mode when the task is:
 
 For feature-level work, read `references/feature-spec-mode.md` and do not reopen the full app workflow unless the feature changes app-level scope.
 
+## Stage Skipping Rule
+
+The workflow is stage-gated, not document-mandatory.
+
+- For `tiny` apps, merge PRD, UX, and implementation details into `APP_BRIEF.md` unless ambiguity would affect implementation.
+- For `small` apps, keep durable docs short and skip `UI_REFERENCE.md` when visual direction does not matter.
+- For `medium` apps, use the durable docs, but load summaries first and details only for the current slice.
+- Never create a document only because the stage exists. Create it when it reduces implementation ambiguity, user risk, UI drift, release risk, or future context cost.
+
 ## Workflow
 
-1. App Scale
-2. Product Owner Mode, when launch intent or user-control checkpoints matter
+1. Product Owner Mode, when launch intent or user-control checkpoints matter
+2. App Scale
 3. App Brief
 4. PRD
 5. UX Spec

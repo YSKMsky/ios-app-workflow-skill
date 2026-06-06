@@ -19,6 +19,23 @@ Use the cheapest credible verification for the change. Do not run expensive test
 | Memory/leak symptom | memgraph only when leak or growth evidence exists | memory tooling by default |
 | Final UI polish | key screenshots only | exhaustive UI test unless core journey is fragile |
 
+## Claim-To-Proof Rule
+
+Before claiming completion, match the claim to the cheapest credible proof.
+
+| Claim | Minimum credible proof |
+| --- | --- |
+| Docs updated | diff or read review |
+| Code compiles | targeted Xcode build |
+| Screen changed visually | targeted screenshot |
+| Navigation works | simulator path |
+| Data persists | save, relaunch, verify data accessible |
+| API path works | mock test or credential-gated live smoke |
+| Error state works | forced error or mock failure path |
+| App Store ready | release checklist plus build/archive and metadata/privacy review |
+
+If proof is not run, say what remains unverified, why it was skipped or blocked, and the cheapest next verification.
+
 ## Simulator Use
 
 Use simulator when:
@@ -73,23 +90,3 @@ Skip by default for:
 - subjective polish
 - one-off layout changes
 - manual-only reader gestures
-
-## V1 English Learning App Testing Boundary
-
-For the V1 read/write learning loop:
-
-Required:
-
-- app opens to Read page after relaunch
-- saved article, expression, answer, feedback, note, highlight, and underline remain accessible
-- generated article/questions/expressions/feedback path has mock or targeted live smoke
-- reader, questions, expression detail, and saved review surfaces have key visual checks
-
-Skipped:
-
-- cloud sync tests
-- login tests
-- payment tests
-- card feature tests
-- listening feature tests
-- exhaustive UI automation for text selection/highlight if agent cannot operate it

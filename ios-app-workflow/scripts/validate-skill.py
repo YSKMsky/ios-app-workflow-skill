@@ -2,6 +2,7 @@
 import re
 import sys
 import json
+import csv
 from pathlib import Path
 
 try:
@@ -13,6 +14,7 @@ except ImportError:
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "SKILL.md"
 CONFIG = ROOT / "config.json"
+EVALS = ROOT / "evals"
 
 
 def fail(errors, message):
@@ -93,6 +95,38 @@ def check_package_clean(errors):
             fail(errors, f"forbidden file in skill package: {path.relative_to(ROOT)}")
 
 
+def check_evals(errors):
+    cases = EVALS / "prompt-cases.csv"
+    behaviors = EVALS / "expected-behaviors.md"
+    rubric = EVALS / "rubric.schema.json"
+    for path in [cases, behaviors, rubric]:
+        if not path.exists():
+            fail(errors, f"missing eval file: {path.relative_to(ROOT)}")
+    if cases.exists():
+        try:
+            with cases.open(newline="", encoding="utf-8") as handle:
+                rows = list(csv.DictReader(handle))
+        except Exception as exc:
+            fail(errors, f"eval prompt-cases.csv is invalid: {exc}")
+            rows = []
+        required = {"id", "should_trigger", "prompt", "expected_core_behavior"}
+        if rows:
+            missing = required - set(rows[0])
+            if missing:
+                fail(errors, f"eval prompt-cases.csv missing columns: {sorted(missing)}")
+            positives = [row for row in rows if row.get("should_trigger") == "true"]
+            negatives = [row for row in rows if row.get("should_trigger") == "false"]
+            if not positives:
+                fail(errors, "eval prompt-cases.csv needs at least one positive trigger case")
+            if not negatives:
+                fail(errors, "eval prompt-cases.csv needs at least one negative trigger case")
+    if rubric.exists():
+        try:
+            json.loads(rubric.read_text(encoding="utf-8"))
+        except Exception as exc:
+            fail(errors, f"eval rubric.schema.json is invalid JSON: {exc}")
+
+
 def check_size(text, errors):
     words = len(re.findall(r"\S+", text))
     if words > 1200:
@@ -111,6 +145,7 @@ def main():
         check_size(text, errors)
     check_config(errors)
     check_package_clean(errors)
+    check_evals(errors)
 
     if errors:
         for error in errors:
